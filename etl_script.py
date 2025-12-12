@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd 
 
 API_KEY = "aef5b771bd07a930d7fc3343c142077f" 
-CITY = "Almaty" 
+CITY = "Sumgait" 
 DB_NAME = "weather_data.db" 
 TABLE_NAME = "weather_records" 
 
@@ -54,14 +54,12 @@ def transform_weather_data(raw_data):
         }
         
         df = pd.DataFrame(data)
-        print("Данные успешно преобразованы в DataFrame.")
+        print("The data has been successfully converted to a DataFrame.")
         return df
-        
+    
     except Exception as e:
-        print(f"ОШИБКА TRANSFORM: Проблема с парсингом или форматированием: {e}")
+        print(f"ERROR TRANSFORM: Parsing or formatting problem: {e}")
         return None
-    
-    
     
 def load_data_to_sqlite(df, db_name, table_name):
     

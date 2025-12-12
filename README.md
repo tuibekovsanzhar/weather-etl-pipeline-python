@@ -21,7 +21,7 @@ The ETL process is implemented in the `etl_script.py` file and follows three seq
 
 ### 1. Extract
 * The `requests` library is used to send a GET request to the **OpenWeatherMap API**.
-* Data is requested for the city of **Almaty** (`CITY = 'Almaty'`).
+* Data is requested for the city of **City** (`CITY = 'Name of city'`).
 * A raw **JSON object** containing weather metrics is received.
 
 ### 2. Transform
